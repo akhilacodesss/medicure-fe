@@ -13,20 +13,28 @@ export default function DoctorSlots() {
   const [time, setTime] = useState('');
   const [holidayMode, setHolidayMode] = useState(false);
 
+useEffect(() => {
   const load = async () => {
     setLoading(true);
+
     try {
-      const { data } = await api.get(`/doctors/${user.doctorInfo._id}`);
+      const { data } = await api.get(
+        `/doctors/${user.doctorInfo._id}`
+      );
+
       setSlots(data.availability);
       setHolidayMode(data.isHolidayMode);
     } catch (err) {
-  toast.error('Failed to load slots');
-} finally {
-  setLoading(false);
-}
+      toast.error('Failed to load slots');
+    } finally {
+      setLoading(false);
+    }
   };
 
-  useEffect(() => { if (user?.doctorInfo?._id) load(); }, [user]);
+  if (user?.doctorInfo?._id) {
+    load();
+  }
+}, [user]);
 
   const addSlot = async () => {
     if (!date || !time) return toast.error('Select date and time');

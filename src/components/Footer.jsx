@@ -94,6 +94,25 @@ export default function Footer() {
             </ul>
           </div>
 
+          <div>
+            <h4 className="font-semibold text-surface-900 mb-3">
+              Quick Links
+            </h4>
+
+            <ul className="space-y-2">
+              {PATIENT_LINKS.map((link) => (
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
+                    className="text-surface-500 hover:text-primary-600 transition"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Contact */}
           <div>
             <p className="text-sm font-bold text-white mb-4">Get In Touch</p>

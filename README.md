@@ -10,7 +10,7 @@ Built using the **MERN Stack (MongoDB, Express.js, React, Node.js)** with secure
 
 🌐 Frontend: 
 
-⚙️ Backend API: 
+⚙️ Backend API: https://medicure-be.onrender.com
 
 ---
 
@@ -24,13 +24,13 @@ Built using the **MERN Stack (MongoDB, Express.js, React, Node.js)** with secure
 
 ### 👨‍⚕️ Doctor Dashboard
 
-_Add screenshot here_
+
 
 ![Doctor Dashboard](./screenshots/doctor-dashboard.png)
 
 ### 🛡️ Admin Dashboard
 
-_Add screenshot here_
+
 
 ![Admin Dashboard](./screenshots/admin-dashboard.png)
 
